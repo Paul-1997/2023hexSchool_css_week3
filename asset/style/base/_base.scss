@@ -1,0 +1,34 @@
+//font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:ital,wght@0,400;0,700;0,900;1,900&display=swap');
+//icons
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+// variable
+$ff-Chinese: 'Noto Sans TC', 'PingFang SC', sans-serif;
+$ff-English: 'Roboto', sans-serif;
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.5;
+    font-family: $ff-Chinese;
+}
+.ff-english{
+    font-family: $ff-English;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+}
+span{
+    vertical-align: middle;
+}
+

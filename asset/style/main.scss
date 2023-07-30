@@ -1,0 +1,20 @@
+// base
+@import "./base/_reset.scss";
+@import "./base/_base.scss";
+
+//utils
+@import './utilities/mixin.scss';
+@import './utilities/variable.scss';
+
+
+// layout
+@import './layout/_header.scss';
+@import './layout/_footer.scss';
+
+
+// page
+@import './pages/_index.scss';
+@import './pages/_products.scss';
+@import './pages/_common_question.scss';
+@import './pages/_location.scss';
+
