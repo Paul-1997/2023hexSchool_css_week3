@@ -191,7 +191,7 @@ span {
 }
 .header h1.logo a {
   display: block;
-  background-image: url(/asset/img/logo-white.png);
+  background-image: url(../img/logo-white.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -487,7 +487,7 @@ span {
 
 @media (max-width: 992px) {
   .banner {
-    background-image: url(/asset/img/home-header-sm.png);
+    background-image: url(../img/home-header-sm.png);
   }
   .our-service .our-service-content {
     flex-wrap: wrap;
@@ -503,7 +503,7 @@ span {
     width: 336px;
   }
   .co-branding-series {
-    background-image: url(/asset/img/index-bg-sm.png);
+    background-image: url(../img/index-bg-sm.png);
   }
   .co-branding-series .co-branding-series-content {
     flex-direction: column;
