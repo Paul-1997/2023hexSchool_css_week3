@@ -515,7 +515,7 @@ span {
   .customer-recommend .customer-recommend-content li {
     width: calc(50% - 12px);
   }
-  .contant-me .contant-me-form {
+  .contact-me .contact-me-form {
     width: 75%;
   }
 }
@@ -546,7 +546,7 @@ span {
     display: block;
     opacity: 1;
   }
-  .contant-me .contant-me-form {
+  .contact-me .contact-me-form {
     width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
