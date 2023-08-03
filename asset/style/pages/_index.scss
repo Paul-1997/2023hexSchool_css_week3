@@ -1,4 +1,4 @@
-.banner {
+.page-index .banner {
 	background-image: url(../img/home-header.png);
 	background-position: center;
 	background-size: cover;
@@ -154,7 +154,7 @@
 }
 
 @media (max-width: 992px) {
-	.banner {
+	.page-index .banner {
 		background-image: url(../img/home-header-sm.png);
 	}
 	.our-service .our-service-content {
@@ -200,7 +200,7 @@
 	}
 }
 @media (max-width: 767px) { 
-	.banner {
+	.page-index .banner {
 		padding-block: 144px;
 		.banner-content {
 			//400px => 16,24

@@ -13,7 +13,7 @@
 
 		:hover,
 		:focus {
-			filter: contrast(25%);
+			filter:invert(70%);
 		}
 	}
 
@@ -42,7 +42,6 @@
 			}
 		}
 	}
-
 	@include mobile {
 		.container {
 			flex-direction: column;

@@ -187,7 +187,7 @@ span {
 }
 .header .logo :hover,
 .header .logo :focus {
-  filter: contrast(25%);
+  filter: invert(70%);
 }
 .header h1.logo a {
   display: block;
@@ -347,28 +347,28 @@ span {
     margin-bottom: 8px;
   }
 }
-.banner {
+.page-index .banner {
   background-image: url(../img/home-header.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding-block: 296px;
 }
-.banner .banner-content {
+.page-index .banner .banner-content {
   flex-direction: column;
   align-items: end;
 }
-.banner .banner-content p {
+.page-index .banner .banner-content p {
   font-size: 36px;
 }
-.banner .banner-content .slogan {
+.page-index .banner .banner-content .slogan {
   font-size: 64px;
 }
-.banner .banner-content a {
+.page-index .banner .banner-content a {
   padding: 6px 12px;
   font-size: 20px;
 }
-.banner .banner-content a:is(:hover, :focus) {
+.page-index .banner .banner-content a:is(:hover, :focus) {
   background: hsla(120, 90%, 30%, 0.7);
 }
 
@@ -486,7 +486,7 @@ span {
 }
 
 @media (max-width: 992px) {
-  .banner {
+  .page-index .banner {
     background-image: url(../img/home-header-sm.png);
   }
   .our-service .our-service-content {
@@ -520,13 +520,13 @@ span {
   }
 }
 @media (max-width: 767px) {
-  .banner {
+  .page-index .banner {
     padding-block: 144px;
   }
-  .banner .banner-content p {
+  .page-index .banner .banner-content p {
     font-size: max(16px, 4vw);
   }
-  .banner .banner-content .slogan {
+  .page-index .banner .banner-content .slogan {
     font-size: max(24px, 6vw);
   }
   .our-service .our-service-content li {
@@ -548,5 +548,146 @@ span {
   }
   .contact-me .contact-me-form {
     width: 100%;
+  }
+}
+.page-product nav > ul {
+  justify-content: space-between;
+}
+.page-product nav > ul li {
+  width: 33.3%;
+  border: 1px solid #dcdcdc;
+  font-size: 32px;
+}
+.page-product nav > ul li:not(:last-child) {
+  border-right: 0;
+}
+.page-product nav > ul li label {
+  cursor: pointer;
+  padding-block: 24px;
+  display: block;
+  margin: 0 auto;
+}
+.page-product nav > ul li input {
+  height: 0px;
+  width: 0;
+}
+.page-product nav > ul li:has(input:checked) {
+  border-bottom: 8px solid #aa0601;
+}
+
+.page-product .banner {
+  display: flex;
+}
+.page-product .banner img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[data-show] {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+:has([value=OPTICAL]:checked) [data-show=optical] {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+:has([value=SUNGLASSES]:checked) [data-show=sunglassses] {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+:has([value=FUNCTIONAL]:checked) [data-show=optical] {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+.product-content .section-title {
+  margin-bottom: 32px;
+  font-size: 32px;
+}
+.product-content .section-title .ff-english {
+  font-size: 42px;
+}
+
+.product-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 80px;
+}
+.product-list ul li > h2 {
+  font-size: 24px;
+  justify-content: space-between;
+}
+.product-list ul li > h2 span {
+  vertical-align: top;
+}
+.product-list ul .glasses-colors a {
+  display: inline-block;
+  width: 24px;
+  aspect-ratio: 1;
+  border-radius: 4px;
+}
+.product-list ul .glasses-colors a:first-child {
+  background: #5f3e2d;
+  margin-right: 8px;
+}
+.product-list ul .glasses-colors a:last-child {
+  background: #b75929;
+}
+.product-list .optical li {
+  width: calc(25% - 18px);
+}
+.product-list .sunglassses li {
+  width: calc(33.3333333333% - 16px);
+}
+
+.pagination {
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.pagination .pagination-ul li {
+  border: 1px solid #f2f2f2;
+}
+.pagination .pagination-ul {
+  align-items: center;
+}
+.pagination .pagination-ul li a {
+  display: block;
+  padding: 12px 16px;
+}
+:is(.pagination .pagination-ul li:first-child, .pagination .pagination-ul li:last-child) a {
+  padding: 12px;
+}
+.pagination .pagination-ul li:is(:hover, :focus) {
+  background: #000;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .page-product nav > ul {
+    margin-inline: -36px;
+  }
+  .page-product nav > ul li {
+    font-size: 24px;
+  }
+  .page-product nav > ul li label {
+    padding-block: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .page-product nav > ul {
+    margin-inline: -15px;
+  }
+  .page-product nav > ul li {
+    font-size: max(16px, 3vw);
   }
 }/*# sourceMappingURL=main.css.map */
