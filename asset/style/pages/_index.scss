@@ -1,4 +1,4 @@
-.page-index .banner {
+.index-banner {
 	background-image: url(../img/home-header.png);
 	background-position: center;
 	background-size: cover;
@@ -20,14 +20,14 @@
 			padding: 6px 12px;
 			font-size: 20px;
 
-			&:is(:hover,:focus) {
+			&:is(:hover, :focus) {
 				background: hsl(120 90 30 / 0.7);
 			}
 		}
 	}
 }
 
-.our-service .our-service-content {
+.our-service-content {
 	gap: 24px;
 
 	li {
@@ -48,7 +48,7 @@
 	}
 }
 
-.classic-glasses .classic-glasses-content {
+.classic-glasses-content {
 	gap: 24px;
 	li {
 		img {
@@ -67,12 +67,13 @@
 	background-position: center;
 	background-size: cover;
 	.co-branding-series-content {
-        .img-wrap{//切換圖片
-            :last-child{
-                display: none;
-                opacity: 0;
-            }
-        }
+		.img-wrap {
+			//切換圖片
+			:last-child {
+				display: none;
+				opacity: 0;
+			}
+		}
 
 		figcaption {
 			padding-block: 8px;
@@ -82,7 +83,7 @@
 	}
 }
 
-.customer-recommend .customer-recommend-content {
+.customer-recommend-content {
 	gap: 24px;
 	li {
 		width: 25%;
@@ -105,7 +106,7 @@
 	}
 }
 
-.contact-me .contact-me-form {
+.contact-me-form {
 	width: 50%;
 	margin: 0 auto;
 	p {
@@ -134,9 +135,9 @@
 			height: 136px;
 		}
 		input[type='checkbox'] {
-				display: inline-block;
-				width: fit-content;
-			}
+			display: inline-block;
+			width: fit-content;
+		}
 	}
 
 	.form-submit {
@@ -146,36 +147,32 @@
 			width: 100%;
 			max-width: 414px;
 
-			&:hover{
-				box-shadow: inset 0 0 8px 2px rgba(0,0,0,.3);
+			&:hover {
+				box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.3);
 			}
 		}
 	}
 }
 
 @media (max-width: 992px) {
-	.page-index .banner {
+	.index-banner {
 		background-image: url(../img/home-header-sm.png);
 	}
-	.our-service .our-service-content {
+	.our-service-content {
 		flex-wrap: wrap;
 		li {
 			width: calc(50% - 12px);
 		}
 	}
-
-	.classic-glasses {
-		.classic-glasses-content {
-			flex-direction: column;
-			align-items: center;
-			li {
-				img {
-					width: 336px;
-				}
+	.classic-glasses-content {
+		flex-direction: column;
+		align-items: center;
+		li {
+			img {
+				width: 336px;
 			}
 		}
 	}
-
 	.co-branding-series {
 		background-image: url(../img/index-bg-sm.png);
 		.co-branding-series-content {
@@ -183,67 +180,55 @@
 			gap: 24px;
 		}
 	}
-
-	.customer-recommend {
-		.customer-recommend-content {
-			flex-wrap: wrap;
-			li {
-				width: calc(50% - 12px);
-			}
+	.customer-recommend-content {
+		flex-wrap: wrap;
+		li {
+			width: calc(50% - 12px);
 		}
 	}
-
 	.contact-me {
 		.contact-me-form {
 			width: 75%;
 		}
 	}
 }
-@media (max-width: 767px) { 
-	.page-index .banner {
+@media (max-width: 767px) {
+	.index-banner {
 		padding-block: 144px;
 		.banner-content {
 			//400px => 16,24
 			p {
-				font-size: max(16px,4vw);
+				font-size: max(16px, 4vw);
 			}
 			.slogan {
-				font-size: max(24px,6vw); 
+				font-size: max(24px, 6vw);
 			}
 		}
 	}
-	.our-service .our-service-content {
+	.our-service-content {
 		li {
 			width: 100%;
-			p {
-				text-align: center;
-			}
 		}
 	}
-	.customer-recommend {
-		.customer-recommend-content {
-			li {
-				width: 100%;
-			}
-		}
-	}
-    .co-branding-series{
-        .co-branding-series-content{
-            .img-wrap{
-                :first-child{
-                    display: none;
-                    opacity: 0;
-                }
-                :last-child{
-                    display: block;
-                    opacity: 1;
-                }
-            }
-        }
-    }
-	.contact-me {
-		.contact-me-form {
+	.customer-recommend-content {
+		li {
 			width: 100%;
 		}
+	}
+
+	.co-branding-series-content {
+		.img-wrap {
+			:first-child {
+				display: none;
+				opacity: 0;
+			}
+			:last-child {
+				display: block;
+				opacity: 1;
+			}
+		}
+	}
+	.contact-me-form {
+		width: 100%;
 	}
 }

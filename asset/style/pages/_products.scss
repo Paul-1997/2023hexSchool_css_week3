@@ -1,8 +1,33 @@
-.page-product nav > ul {
+//僅用來切換optical or sunglasses
+[data-show] {
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+	transition: opacity 750ms;
+}
+:has(input[value='OPTICAL']:checked) [data-show='optical'] {
+	opacity: 1;
+	visibility: visible;
+	height: auto;
+}
+:has(input[value='SUNGLASSES']:checked) [data-show='sunglasses'] {
+	opacity: 1;
+	visibility: visible;
+	height: auto;
+}
+:has(input[value='FUNCTIONAL']:checked) [data-show='optical'] {
+	//第三個沒有資訊所以放第一個的項目
+	opacity: 1;
+	visibility: visible;
+	height: auto;
+}
+
+.product-nav {
 	justify-content: space-between;
 
 	li {
-		width: 33.3%;
+		width: calc(100% / 3);
 		border: 1px solid #dcdcdc;
 		font-size: 32px;
 		&:not(:last-child) {
@@ -12,11 +37,11 @@
             cursor: pointer;
 			padding-block: 24px;
 			display: block;
-			margin: 0 auto;
 		}
 		input {
+			display: none;
 			height: 0px;
-            width: 0;
+            width: 0px;
 		}
 		&:has(input:checked) {
 			//active
@@ -25,45 +50,30 @@
 	}
 }
 
-.page-product .banner {
+.product-banner {
     img{
         width: 50%;
         object-fit: cover;
     }
-	display: flex;
-}
-
-//product
-[data-show] {
-	//只有active的會顯示 預設都隱藏
-	height: 0;
-	opacity: 0;
-	visibility: hidden;
-	overflow: hidden;
-}
-:has([value='OPTICAL']:checked) [data-show='optical'] {
-	opacity: 1;
-	visibility: visible;
-	height: auto;
-}
-:has([value='SUNGLASSES']:checked) [data-show='sunglassses'] {
-	opacity: 1;
-	visibility: visible;
-	height: auto;
-}
-:has([value='FUNCTIONAL']:checked) [data-show='optical'] {
-	//第三個沒有資訊所以放第一個的項目
-	opacity: 1;
-	visibility: visible;
-	height: auto;
+	.banner-lg{
+		@include pad{
+			display: none;
+		}
+	}
+	.banner-sm{
+		display: none;
+		
+		@include pad {
+			display: block;
+		}
+	}
 }
 
 .product-content {
-	.section-title {
+	h1 {
 		margin-bottom: 32px;
 		font-size: 32px;
-
-		.ff-english {
+		.product-title{
 			font-size: 42px;
 		}
 	}
@@ -75,12 +85,10 @@
 		flex-wrap: wrap;
 		gap: 24px;
 		row-gap: 80px;
+		align-items: center;
 		li > h2 {
 			font-size: 24px;
 			justify-content: space-between;
-			span {
-				vertical-align: top;
-			}
 		}
 		.glasses-colors a {
 			display: inline-block;
@@ -104,7 +112,7 @@
 			width: calc(25% - (24px * 3 / 4));
 		}
 	}
-	.sunglassses {
+	.sunglasses {
         li{
             width: calc(100% / 3 - (24px / 3 * 2));
         }
@@ -116,22 +124,30 @@
 	margin-bottom: 80px;
 
 	.pagination-ul li {
-		border: 1px solid #f2f2f2;
+		border: 1px solid #555555;
 	}
 
 	.pagination-ul {
 		align-items: center;
 		li {
 			a {
+				font-size: 18px;
 				display: block;
 				padding: 12px 16px;
 			}
-            :is(&:first-child,&:last-child) a{ //pre , next
-                padding: 12px;
+            &:is(.pre,.next) a{
+                padding: 11px 12px;
+				font-size: 19px;
+				line-height: 29px;
             }
-            @include hover{
-                background: #000;
+			&.active{
+				background: #000;
                 color:white;
+			}
+            @include hover{
+				&:not(.active){
+					background-color: #f2f2f2;
+				}
             }
 		}
 	}
@@ -149,6 +165,13 @@
         }
 
     }
+	.product-list {
+		.optical li,
+		.sunglasses li {
+			width: calc(50% - 12px);
+		}
+	}
+
 }
 @include mobile {
     .page-product nav > ul {
@@ -157,4 +180,43 @@
             font-size: max(16px,3vw);
         }
     }
+	.product-content {
+		.section-title {
+			margin-bottom: 24px;
+			&, .product-title{
+				font-size: 24px;
+			}
+		}
+	}
+	.product-list {
+		ul{
+			row-gap: 24px;
+		}
+		.optical li,
+		.sunglasses li {
+			width: 100%;
+		}
+	}
+	.pagination .pagination-ul li
+	{
+		a,
+		&:is(.pre,.next) a{
+			font-size: 16px;
+		}
+		&:is(.pre,.next) a{
+			line-height: 26px;
+		}
+	}
+}
+
+@media (max-width: 390px) {
+	.pagination .pagination-ul li{
+		a{
+			padding: 6px 8px;
+		}
+		&:is(.pre,.next) a{
+			padding: 5px 8px;
+		}
+	}
+
 }

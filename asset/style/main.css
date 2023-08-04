@@ -75,10 +75,6 @@ img {
   height: auto;
 }
 
-span {
-  vertical-align: middle;
-}
-
 .bg-red {
   background-color: #aa0601;
 }
@@ -265,6 +261,7 @@ span {
   outline-color: transparent;
 }
 .footer .contact-method span {
+  vertical-align: middle;
   font-size: 36px;
   margin-right: 16px;
 }
@@ -347,60 +344,60 @@ span {
     margin-bottom: 8px;
   }
 }
-.page-index .banner {
+.index-banner {
   background-image: url(../img/home-header.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding-block: 296px;
 }
-.page-index .banner .banner-content {
+.index-banner .banner-content {
   flex-direction: column;
   align-items: end;
 }
-.page-index .banner .banner-content p {
+.index-banner .banner-content p {
   font-size: 36px;
 }
-.page-index .banner .banner-content .slogan {
+.index-banner .banner-content .slogan {
   font-size: 64px;
 }
-.page-index .banner .banner-content a {
+.index-banner .banner-content a {
   padding: 6px 12px;
   font-size: 20px;
 }
-.page-index .banner .banner-content a:is(:hover, :focus) {
+.index-banner .banner-content a:is(:hover, :focus) {
   background: hsla(120, 90%, 30%, 0.7);
 }
 
-.our-service .our-service-content {
+.our-service-content {
   gap: 24px;
 }
-.our-service .our-service-content li {
+.our-service-content li {
   width: 25%;
 }
-.our-service .our-service-content li img {
+.our-service-content li img {
   display: block;
   margin: 0 auto;
   width: 100px;
   aspect-ratio: 1;
 }
-.our-service .our-service-content li h3 {
+.our-service-content li h3 {
   font-size: 24px;
   margin-bottom: 8px;
 }
-.our-service .our-service-content li p {
+.our-service-content li p {
   color: #000;
 }
 
-.classic-glasses .classic-glasses-content {
+.classic-glasses-content {
   gap: 24px;
 }
-.classic-glasses .classic-glasses-content li img {
+.classic-glasses-content li img {
   aspect-ratio: 1;
   width: 416px;
   margin-bottom: 8px;
 }
-.classic-glasses .classic-glasses-content li h3 {
+.classic-glasses-content li h3 {
   font-size: 48px;
 }
 
@@ -419,13 +416,13 @@ span {
   font-size: 48px;
 }
 
-.customer-recommend .customer-recommend-content {
+.customer-recommend-content {
   gap: 24px;
 }
-.customer-recommend .customer-recommend-content li {
+.customer-recommend-content li {
   width: 25%;
 }
-.customer-recommend .customer-recommend-content li .card-content {
+.customer-recommend-content li .card-content {
   min-height: 205px;
   padding: 16px;
   flex-direction: column;
@@ -433,73 +430,73 @@ span {
   border: 1px solid #dee2e6;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1607843137);
 }
-.customer-recommend .customer-recommend-content li .customer-name {
+.customer-recommend-content li .customer-name {
   margin-bottom: 8px;
 }
-.customer-recommend .customer-recommend-content li .age {
+.customer-recommend-content li .age {
   font-size: 14px;
 }
 
-.contact-me .contact-me-form {
+.contact-me-form {
   width: 50%;
   margin: 0 auto;
 }
-.contact-me .contact-me-form p {
+.contact-me-form p {
   margin-bottom: 24px;
 }
-.contact-me .contact-me-form label,
-.contact-me .contact-me-form [type=button] {
+.contact-me-form label,
+.contact-me-form [type=button] {
   cursor: pointer;
 }
-.contact-me .contact-me-form textarea,
-.contact-me .contact-me-form input {
+.contact-me-form textarea,
+.contact-me-form input {
   width: 100%;
   border: 1px solid #000;
   padding: 6px 12px;
 }
-.contact-me .contact-me-form .form-group {
+.contact-me-form .form-group {
   margin-bottom: 16px;
 }
-.contact-me .contact-me-form .form-group:has([type=checkbox]) {
+.contact-me-form .form-group:has([type=checkbox]) {
   margin-bottom: 48px;
 }
-.contact-me .contact-me-form .form-group label {
+.contact-me-form .form-group label {
   margin-bottom: 8px;
   display: block;
 }
-.contact-me .contact-me-form .form-group textarea {
+.contact-me-form .form-group textarea {
   height: 136px;
 }
-.contact-me .contact-me-form .form-group input[type=checkbox] {
+.contact-me-form .form-group input[type=checkbox] {
   display: inline-block;
   width: -moz-fit-content;
   width: fit-content;
 }
-.contact-me .contact-me-form .form-submit input {
+.contact-me-form .form-submit input {
   border: none;
   padding-block: 8px;
   width: 100%;
   max-width: 414px;
 }
-.contact-me .contact-me-form .form-submit input:hover {
+.contact-me-form .form-submit input:hover {
   box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 992px) {
-  .page-index .banner {
+  .index-banner {
     background-image: url(../img/home-header-sm.png);
   }
-  .our-service .our-service-content {
+  .our-service-content {
     flex-wrap: wrap;
   }
-  .our-service .our-service-content li {
+  .our-service-content li {
     width: calc(50% - 12px);
   }
-  .classic-glasses .classic-glasses-content {
+  .classic-glasses-content {
     flex-direction: column;
     align-items: center;
   }
-  .classic-glasses .classic-glasses-content li img {
+  .classic-glasses-content li img {
     width: 336px;
   }
   .co-branding-series {
@@ -509,10 +506,10 @@ span {
     flex-direction: column;
     gap: 24px;
   }
-  .customer-recommend .customer-recommend-content {
+  .customer-recommend-content {
     flex-wrap: wrap;
   }
-  .customer-recommend .customer-recommend-content li {
+  .customer-recommend-content li {
     width: calc(50% - 12px);
   }
   .contact-me .contact-me-form {
@@ -520,100 +517,108 @@ span {
   }
 }
 @media (max-width: 767px) {
-  .page-index .banner {
+  .index-banner {
     padding-block: 144px;
   }
-  .page-index .banner .banner-content p {
+  .index-banner .banner-content p {
     font-size: max(16px, 4vw);
   }
-  .page-index .banner .banner-content .slogan {
+  .index-banner .banner-content .slogan {
     font-size: max(24px, 6vw);
   }
-  .our-service .our-service-content li {
+  .our-service-content li {
     width: 100%;
   }
-  .our-service .our-service-content li p {
-    text-align: center;
-  }
-  .customer-recommend .customer-recommend-content li {
+  .customer-recommend-content li {
     width: 100%;
   }
-  .co-branding-series .co-branding-series-content .img-wrap :first-child {
+  .co-branding-series-content .img-wrap :first-child {
     display: none;
     opacity: 0;
   }
-  .co-branding-series .co-branding-series-content .img-wrap :last-child {
+  .co-branding-series-content .img-wrap :last-child {
     display: block;
     opacity: 1;
   }
-  .contact-me .contact-me-form {
+  .contact-me-form {
     width: 100%;
   }
 }
-.page-product nav > ul {
-  justify-content: space-between;
-}
-.page-product nav > ul li {
-  width: 33.3%;
-  border: 1px solid #dcdcdc;
-  font-size: 32px;
-}
-.page-product nav > ul li:not(:last-child) {
-  border-right: 0;
-}
-.page-product nav > ul li label {
-  cursor: pointer;
-  padding-block: 24px;
-  display: block;
-  margin: 0 auto;
-}
-.page-product nav > ul li input {
-  height: 0px;
-  width: 0;
-}
-.page-product nav > ul li:has(input:checked) {
-  border-bottom: 8px solid #aa0601;
-}
-
-.page-product .banner {
-  display: flex;
-}
-.page-product .banner img {
-  width: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 [data-show] {
   height: 0;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
+  transition: opacity 750ms;
 }
 
-:has([value=OPTICAL]:checked) [data-show=optical] {
+:has(input[value=OPTICAL]:checked) [data-show=optical] {
   opacity: 1;
   visibility: visible;
   height: auto;
 }
 
-:has([value=SUNGLASSES]:checked) [data-show=sunglassses] {
+:has(input[value=SUNGLASSES]:checked) [data-show=sunglasses] {
   opacity: 1;
   visibility: visible;
   height: auto;
 }
 
-:has([value=FUNCTIONAL]:checked) [data-show=optical] {
+:has(input[value=FUNCTIONAL]:checked) [data-show=optical] {
   opacity: 1;
   visibility: visible;
   height: auto;
 }
 
-.product-content .section-title {
+.product-nav {
+  justify-content: space-between;
+}
+.product-nav li {
+  width: 33.3333333333%;
+  border: 1px solid #dcdcdc;
+  font-size: 32px;
+}
+.product-nav li:not(:last-child) {
+  border-right: 0;
+}
+.product-nav li label {
+  cursor: pointer;
+  padding-block: 24px;
+  display: block;
+}
+.product-nav li input {
+  display: none;
+  height: 0px;
+  width: 0px;
+}
+.product-nav li:has(input:checked) {
+  border-bottom: 8px solid #aa0601;
+}
+
+.product-banner img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 992px) {
+  .product-banner .banner-lg {
+    display: none;
+  }
+}
+.product-banner .banner-sm {
+  display: none;
+}
+@media (max-width: 992px) {
+  .product-banner .banner-sm {
+    display: block;
+  }
+}
+
+.product-content h1 {
   margin-bottom: 32px;
   font-size: 32px;
 }
-.product-content .section-title .ff-english {
+.product-content h1 .product-title {
   font-size: 42px;
 }
 
@@ -622,13 +627,11 @@ span {
   flex-wrap: wrap;
   gap: 24px;
   row-gap: 80px;
+  align-items: center;
 }
 .product-list ul li > h2 {
   font-size: 24px;
   justify-content: space-between;
-}
-.product-list ul li > h2 span {
-  vertical-align: top;
 }
 .product-list ul .glasses-colors a {
   display: inline-block;
@@ -646,7 +649,7 @@ span {
 .product-list .optical li {
   width: calc(25% - 18px);
 }
-.product-list .sunglassses li {
+.product-list .sunglasses li {
   width: calc(33.3333333333% - 16px);
 }
 
@@ -655,21 +658,27 @@ span {
   margin-bottom: 80px;
 }
 .pagination .pagination-ul li {
-  border: 1px solid #f2f2f2;
+  border: 1px solid #555555;
 }
 .pagination .pagination-ul {
   align-items: center;
 }
 .pagination .pagination-ul li a {
+  font-size: 18px;
   display: block;
   padding: 12px 16px;
 }
-:is(.pagination .pagination-ul li:first-child, .pagination .pagination-ul li:last-child) a {
-  padding: 12px;
+.pagination .pagination-ul li:is(.pre, .next) a {
+  padding: 11px 12px;
+  font-size: 19px;
+  line-height: 29px;
 }
-.pagination .pagination-ul li:is(:hover, :focus) {
+.pagination .pagination-ul li.active {
   background: #000;
   color: white;
+}
+.pagination .pagination-ul li:is(:hover, :focus):not(.active) {
+  background-color: #f2f2f2;
 }
 
 @media (max-width: 992px) {
@@ -682,6 +691,10 @@ span {
   .page-product nav > ul li label {
     padding-block: 16px;
   }
+  .product-list .optical li,
+  .product-list .sunglasses li {
+    width: calc(50% - 12px);
+  }
 }
 @media (max-width: 767px) {
   .page-product nav > ul {
@@ -689,5 +702,32 @@ span {
   }
   .page-product nav > ul li {
     font-size: max(16px, 3vw);
+  }
+  .product-content .section-title {
+    margin-bottom: 24px;
+  }
+  .product-content .section-title, .product-content .section-title .product-title {
+    font-size: 24px;
+  }
+  .product-list ul {
+    row-gap: 24px;
+  }
+  .product-list .optical li,
+  .product-list .sunglasses li {
+    width: 100%;
+  }
+  .pagination .pagination-ul li a, .pagination .pagination-ul li:is(.pre, .next) a {
+    font-size: 16px;
+  }
+  .pagination .pagination-ul li:is(.pre, .next) a {
+    line-height: 26px;
+  }
+}
+@media (max-width: 390px) {
+  .pagination .pagination-ul li a {
+    padding: 6px 8px;
+  }
+  .pagination .pagination-ul li:is(.pre, .next) a {
+    padding: 5px 8px;
   }
 }/*# sourceMappingURL=main.css.map */
