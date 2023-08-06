@@ -34,14 +34,14 @@
 			border-right: 0;
 		}
 		label {
-            cursor: pointer;
+			cursor: pointer;
 			padding-block: 24px;
 			display: block;
 		}
 		input {
 			display: none;
 			height: 0px;
-            width: 0px;
+			width: 0px;
 		}
 		&:has(input:checked) {
 			//active
@@ -51,18 +51,18 @@
 }
 
 .product-banner {
-    img{
-        width: 50%;
-        object-fit: cover;
-    }
-	.banner-lg{
-		@include pad{
+	img {
+		width: 50%;
+		object-fit: cover;
+	}
+	.banner-lg {
+		@include pad {
 			display: none;
 		}
 	}
-	.banner-sm{
+	.banner-sm {
 		display: none;
-		
+
 		@include pad {
 			display: block;
 		}
@@ -71,9 +71,8 @@
 
 .product-content {
 	h1 {
-		margin-bottom: 32px;
 		font-size: 32px;
-		.product-title{
+		.product-title {
 			font-size: 42px;
 		}
 	}
@@ -113,9 +112,9 @@
 		}
 	}
 	.sunglasses {
-        li{
-            width: calc(100% / 3 - (24px / 3 * 2));
-        }
+		li {
+			width: calc(100% / 3 - (24px / 3 * 2));
+		}
 	}
 }
 
@@ -123,73 +122,68 @@
 	justify-content: center;
 	margin-bottom: 80px;
 
-	.pagination-ul li {
-		border: 1px solid #555555;
-	}
-
 	.pagination-ul {
 		align-items: center;
 		li {
+			border: 1px solid #555555;
 			a {
 				font-size: 18px;
 				display: block;
 				padding: 12px 16px;
 			}
-            &:is(.pre,.next) a{
-                padding: 11px 12px;
+			&:is(.pre, .next) a {
+				padding: 11px 12px;
 				font-size: 19px;
 				line-height: 29px;
-            }
-			&.active{
-				background: #000;
-                color:white;
 			}
-            @include hover{
-				&:not(.active){
+			&.active {
+				background: #000;
+				color: white;
+			}
+			@include hover {
+				&:not(.active) {
 					background-color: #f2f2f2;
 				}
-            }
+			}
 		}
 	}
 }
 
-
 @include pad {
-    .page-product nav > ul {
-        margin-inline: -36px;
-        li{
-            font-size: 24px;
-            label{
-                padding-block:16px;
-            }
-        }
-
-    }
+	.product-nav {
+		margin-inline: -36px;
+		li {
+			font-size: 24px;
+			label {
+				padding-block: 16px;
+			}
+		}
+	}
 	.product-list {
 		.optical li,
 		.sunglasses li {
 			width: calc(50% - 12px);
 		}
 	}
-
 }
 @include mobile {
-    .page-product nav > ul {
-        margin-inline: -15px;
-        li{
-            font-size: max(16px,3vw);
-        }
-    }
+	.product-nav {
+		margin-inline: -15px;
+		li {
+			font-size: max(16px, 3vw);
+		}
+	}
 	.product-content {
-		.section-title {
+		h1 {
 			margin-bottom: 24px;
-			&, .product-title{
+			&,
+			.product-title {
 				font-size: 24px;
 			}
 		}
 	}
 	.product-list {
-		ul{
+		ul {
 			row-gap: 24px;
 		}
 		.optical li,
@@ -197,26 +191,24 @@
 			width: 100%;
 		}
 	}
-	.pagination .pagination-ul li
-	{
+	.pagination-ul li {
 		a,
-		&:is(.pre,.next) a{
+		&:is(.pre, .next) a {
 			font-size: 16px;
 		}
-		&:is(.pre,.next) a{
+		&:is(.pre, .next) a {
 			line-height: 26px;
 		}
 	}
 }
 
 @media (max-width: 390px) {
-	.pagination .pagination-ul li{
-		a{
+	.pagination-ul li {
+		a {
 			padding: 6px 8px;
 		}
-		&:is(.pre,.next) a{
+		&:is(.pre, .next) a {
 			padding: 5px 8px;
 		}
 	}
-
 }
