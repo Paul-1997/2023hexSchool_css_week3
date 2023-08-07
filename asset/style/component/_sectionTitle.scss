@@ -1,0 +1,18 @@
+.section-title{ //index
+    font-size: 48px;
+    margin-bottom: 48px;
+    &:is(h1){//other pages
+        margin-bottom: 32px;
+    }
+    @include mobile{
+        &:is(h1),
+        &{
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+    }
+    &-styled{
+        border-left: 8px solid #9F1213;
+        text-indent: 16px;
+    }
+}
