@@ -121,6 +121,7 @@
 		width: 100%;
 		border: 1px solid #000;
 		padding: 6px 12px;
+		background: transparent;
 	}
 	.form-group {
 		margin-bottom: 16px;
@@ -133,6 +134,7 @@
 		}
 		textarea {
 			height: 136px;
+			resize: none;
 		}
 		input[type='checkbox'] {
 			display: inline-block;
@@ -210,13 +212,8 @@
 			width: 100%;
 		}
 	}
-	.customer-recommend-content {
-		li {
-			width: 100%;
-		}
-	}
 
-	.co-branding-series-content {
+.co-branding-series	.co-branding-series-content {
 		.img-wrap {
 			:first-child {
 				display: none;
@@ -230,5 +227,13 @@
 	}
 	.contact-me-form {
 		width: 100%;
+	}
+}
+
+@media (max-width:576px){
+	.customer-recommend-content {
+		li {
+			width: 100%;
+		}
 	}
 }
