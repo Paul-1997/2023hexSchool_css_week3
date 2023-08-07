@@ -83,7 +83,6 @@ nav:has(.blog-nav){
 
             @include pad{
                 // display: none;
-                display: inline-flex;
                 &::before,&::after{
                     display: none;
                 }
