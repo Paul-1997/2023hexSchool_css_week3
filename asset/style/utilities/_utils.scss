@@ -1,0 +1,49 @@
+.italic{
+    font-style: italic;
+}
+.text-center{
+    text-align: center;
+}
+//layout
+.d-flex{
+    display: flex;
+}
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-inline: 12px;
+    @include pad {
+        padding-inline: 36px;
+    }
+    @include mobile {
+        padding-inline: 15px;
+    }
+}
+
+
+
+.section-py{//index
+    padding-block: 80px;
+
+    @include mobile {
+        padding-block: 40px;
+    }
+}
+.container-py{
+    padding-block: 96px 80px;
+    &.product-content{
+        padding-block: 80px;
+    }
+    @include pad{
+        &,&.product-content{
+            padding-block: 80px;
+        }
+    }
+    @include mobile {
+        &,&.product-content{
+            padding-block: 40px 64px;
+        }
+        
+    }
+}
+

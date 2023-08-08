@@ -6,7 +6,6 @@ $colors :(
     gray:#707070,
 );
 
-
 @each $name , $color in $colors{
     .bg-#{$name}{
         background-color: $color;
@@ -32,46 +31,6 @@ $font-weight: (
     }
 }
 
-.italic{
-    font-style: italic;
-}
-.text-center{
-    text-align: center;
-}
 
 
-//layout
-.d-flex{
-    display: flex;
-}
-.container{
-    max-width: 1320px;
-    margin: 0 auto;
-    padding-inline: 12px;
-    @include pad {
-        padding-inline: 36px;
-    }
-    @include mobile {
-        padding-inline: 15px;
-    }
-}
-
-
-//main > section common
-.section-title{
-    font-size: 48px;
-    margin-bottom: 48px;
-
-    @include mobile{
-        font-size: 24px;
-        margin-bottom: 24px;
-    }
-}
-.section-py{
-    padding-block: 80px;
-
-    @include mobile {
-        padding-block: 40px;
-    }
-}
 
