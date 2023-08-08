@@ -11,17 +11,18 @@
         line-height: 26px;
         color:#495057;
         width: 304px;
+        border: 1px solid #CED4DA;
     }  
 }
 
-.location-card-group{
+.store-card-group{
     flex-wrap: wrap;
     gap:24px;
-    .location-card{
+    .store-card{
         width: calc((100% - 2 * 24px) / 3) ;
     }
 }
-.location-card-item{
+.store-card-item{
     --bd-color: #00000020;
     border: 1px solid var(--bd-color);
     .card-name,.card-content{
@@ -37,7 +38,7 @@
 
         li{
             align-items: center;
-            &:last-child span{//location on
+            &:last-child span{//store on
                 align-self: start;
             }
             &:not(:last-child){
@@ -52,12 +53,11 @@
         }
     }
 }
-.card-button button{
-    width: 100%;
+.card-button a{
+    display: block;
     border: none;
     padding-block:16px;
     font-size: 19px;
-    cursor: pointer;
     background: black;
     color:white;
 
@@ -68,7 +68,7 @@
 }
 
 @include pad{
-    .location-card-group .location-card{
+    .store-card-group .store-card{
         width: calc(50% - 24px);
     }
 }
@@ -80,7 +80,7 @@
             width: min(278px,66vw); //310px
         }
     }
-    .location-card-group .location-card{
+    .store-card-group .store-card{
         width: 100%;
     }
 }
