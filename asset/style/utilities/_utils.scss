@@ -1,3 +1,26 @@
+//color
+@each $name , $color in $colors{
+    .bg-#{$name}{
+        background-color: $color;
+    }
+    .text-#{$name}{
+        color: $color;
+    }
+}
+.text-white{
+    color:#fff;
+}
+
+//text
+@each $type, $fw in $font-weight{
+    .fw-#{$type}{
+        font-weight: $fw;
+    }
+}
+
+
+
+
 .italic{
     font-style: italic;
 }

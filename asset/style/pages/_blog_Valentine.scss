@@ -4,6 +4,10 @@
 		position: relative;
 		display: inline-block;
 		padding-right: 8px;
+
+		@include hover {
+			color: red;
+		}
 		&::after {
 			content: '\/';
 			display: inline-block;

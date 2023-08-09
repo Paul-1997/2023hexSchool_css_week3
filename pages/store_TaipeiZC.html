@@ -29,14 +29,21 @@
 				<h2 class="store-title fw-blod section-title section-title-styled">
 					門市據點
 				</h2>
-				<label for="selectStore" class="area-selector"
+				<label for="selectStore" class="store-selector"
 					>選擇分店
 					<select name="selectStore" id="selectStore">
-						<option value="選擇地區" selected>台北中山旗艦店</option>
-						<option value="選擇地區" >台北東山店</option>
-						<option value="選擇地區" >台北南山店</option>
-						<option value="選擇地區" >台北西山店</option>
-						<option value="選擇地區" >台北北山店</option>
+						<optgroup label="北部">
+							<option value="中山店" selected>台北中山旗艦店</option>
+							<option value="綠園店">台北綠園店</option>
+						</optgroup>
+						<optgroup label="中部">
+							<option value="清水店">台中清水旗艦店</option>
+						</optgroup>
+						<optgroup label="南部">
+							<option value="中正形象店">高雄中正形象店</option>
+							<option value="夢時代店">高雄夢時代店</option>
+						</optgroup>
+
 					</select>
 				</label>
 				<div class="store-content d-flex">

@@ -18,7 +18,19 @@ nav:has(.blog-nav) {
 		}
 	}
 }
+.blog-content{
+	padding-bottom: 124px;
+	@include pad{
+		padding-bottom: 80px;
+	}
+	@include mobile{
+		padding-bottom: 64px;
 
+		+ .pagination {
+			margin-bottom: 64px;
+		}
+	}
+}
 .blog-list {
 	.list-item {
 		&:not(:last-child) {

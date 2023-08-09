@@ -1,4 +1,4 @@
-//color
+
 $colors :(
     red: #aa0601,
     dark-red: #650300,
@@ -6,30 +6,15 @@ $colors :(
     gray:#707070,
 );
 
-@each $name , $color in $colors{
-    .bg-#{$name}{
-        background-color: $color;
-    }
-    .text-#{$name}{
-        color: $color;
-    }
-}
-.text-white{
-    color:#fff;
-}
 
-//text
+
 $font-weight: (
     medium: 500,
     bold: 700,
     black: 900
 );
 
-@each $type, $fw in $font-weight{
-    .fw-#{$type}{
-        font-weight: $fw;
-    }
-}
+
 
 
 

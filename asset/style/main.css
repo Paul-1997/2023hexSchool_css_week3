@@ -781,12 +781,12 @@ img {
   margin-bottom: 8px;
 }
 
-.area-selector {
+.store-selector {
   font-size: 24px;
   display: block;
   margin-bottom: 40px;
 }
-.area-selector select {
+.store-selector select {
   vertical-align: middle;
   margin-left: 12px;
   padding: 6px 12px;
@@ -855,10 +855,10 @@ img {
   }
 }
 @media (max-width: 767px) {
-  .area-selector {
+  .store-selector {
     font-size: 16px;
   }
-  .area-selector select {
+  .store-selector select {
     margin-left: 8px;
     width: min(278px, 66vw);
   }
@@ -928,6 +928,23 @@ nav:has(.blog-nav) {
 .blog-nav-search-link span {
   font-size: 30px;
   vertical-align: middle;
+}
+
+.blog-content {
+  padding-bottom: 124px;
+}
+@media (max-width: 992px) {
+  .blog-content {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .blog-content {
+    padding-bottom: 64px;
+  }
+  .blog-content + .pagination {
+    margin-bottom: 64px;
+  }
 }
 
 .blog-list .list-item {
@@ -1044,6 +1061,9 @@ nav:has(.blog-nav) {
   position: relative;
   display: inline-block;
   padding-right: 8px;
+}
+.page-router li:is(:hover, :focus) {
+  color: red;
 }
 .page-router li::after {
   content: "/";

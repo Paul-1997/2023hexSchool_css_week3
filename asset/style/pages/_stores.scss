@@ -1,5 +1,5 @@
 
-.area-selector{
+.store-selector{
     font-size: 24px;
     display: block;
     margin-bottom: 40px;
@@ -73,7 +73,7 @@
     }
 }
 @include mobile{
-    .area-selector{
+    .store-selector{
         font-size: 16px;
         select{
             margin-left: 8px;
